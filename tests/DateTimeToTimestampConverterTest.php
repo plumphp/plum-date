@@ -3,6 +3,7 @@
 namespace Plum\PlumDate;
 
 use DateTime;
+use DateTimeZone;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -22,8 +23,9 @@ class DateTimeToTimestampConverterTest extends PHPUnit_Framework_TestCase
     public function convertConvertsDateTimeIntoTimestamp()
     {
         $converter = new DateTimeToTimestampConverter();
+        $date      = new DateTime('2015-10-21 19:28:00');
 
-        $this->assertEquals(1445448480, $converter->convert(new DateTime('2015-10-21 19:28:00')));
+        $this->assertEquals($date->getTimestamp(), $converter->convert($date));
     }
 
     /**
