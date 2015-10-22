@@ -28,7 +28,21 @@ Please refer to the [Plum documentation](https://github.com/plumphp/plum/blob/ma
 information.
 
 Currently PlumDate contains converters to convert strings and timestamps into `DateTime` objects and to convert
-`DateTime` objects into strings and timestamps.
+`DateTime` objects into strings and timestamps and filters to detect whether a date is before or after a certain point
+in time.
+
+### Overview
+
+**Converters**
+
+- [`DateTimeToStringConverter`](#DateTimeToStringConverter)
+- [`DateTimeToTimestampConverter`](#DateTimeToTimestampConverter)
+- [`StringToDateTimeConverter`](#StringToDateTimeConverter)
+- [`TimestampToDateTimeConverter`](#TimestampToDateTimeConverter)
+
+**Filters**
+
+- [`BeforeFilter`](#beforefilter)
 
 ### `DateTimeToStringConverter`
 
@@ -81,6 +95,21 @@ $converter->convert(1445448480); // -> DateTime
 
 $converter = new TimestampToDateTimeConverter(new DateTimeZone('Europe/Vienna'));
 $converter->convert(1445448480); // -> DateTime
+```
+
+### `BeforeFilter`
+
+`Plum\PlumDate\BeforeFilter` returns `true` for all dates that are before a given date.
+
+```php
+use Plum\PlumDate\BeforeFilter;
+
+$filter = new BeforeFilter(new DateTime('2015-10-21 19:28'));
+$filter->filter(new DateTime('1955-11-12 18:38')); // -> true
+$filter->filter(new DateTime('2015-10-26 21:00')); // -> false
+
+// Same date as in constructor:
+$filter->filter(new DateTime('2015-10-21 19:28')); // -> false
 ```
 
 
