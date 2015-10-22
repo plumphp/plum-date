@@ -27,6 +27,62 @@ Usage
 Please refer to the [Plum documentation](https://github.com/plumphp/plum/blob/master/docs/index.md) for more
 information.
 
+Currently PlumDate contains converters to convert strings and timestamps into `DateTime` objects and to convert
+`DateTime` objects into strings and timestamps.
+
+### `DateTimeToStringConverter`
+
+`Plum\PlumDate\DateTimeToStringConverter` converts a `DateTime` object into a string. The format of the string has to
+be passed to the constructor.
+
+```php
+use Plum\PlumDate\DateTimeToStringConverter;
+
+$converter = new DateTimeToStringConverter('y-m-d H:i:s');
+$converter->convert(new DateTime()); // -> e.g., "2015-10-21 19:28:00"
+```
+
+### `DateTimeToTimestampConverter`
+
+`Plum\PlumDate\DateTimeToTimestampConverter` converts a `DateTime` object into a timestamp.
+
+```php
+use Plum\PlumDate\DateTimeToTimestampConverter;
+
+$converter = new DateTimeToTimestampConverter();
+$converter->convert(new DateTime()); // -> e.g., 1445448480
+```
+
+### `StringToDateTimeConverter`
+
+`Plum\PlumDate\StringToDateTimeConverter` takes a string and returns a `DateTime` object. The constructor takes an
+optional `DateTimeZone` object that is passed to the `DateTime` constructor.
+
+```php
+use Plum\PlumDate\StringToDateTimeConverter;
+
+$converter = new StringToDateTimeConverter();
+$converter->convert('2015-10-21 19:28:00'); // -> DateTime
+
+$converter = new StringToDateTimeConverter(new DateTimeZone('Europe/Vienna'));
+$converter->convert('2015-10-21 19:28:00'); // -> DateTime
+```
+
+### `TimestampToDateTimeConverter`
+
+`Plum\PlumDate\TimestampToDateTimeConverter` takes a timestamp and returns a `DateTime` object. An instance of
+`DateTimeZone` can be passed to the constructor, which will be used to instantiate the `DateTime` object.
+
+```php
+use Plum\PlumDate\TimestampToDateTimeConverter;
+
+$converter = new TimestampToDateTimeConverter();
+$converter->convert(1445448480); // -> DateTime
+
+$converter = new TimestampToDateTimeConverter(new DateTimeZone('Europe/Vienna'));
+$converter->convert(1445448480); // -> DateTime
+```
+
 
 Change Log
 ----------
