@@ -42,6 +42,7 @@ in time.
 
 **Filters**
 
+- [`AfterFilter`](#afterfilter)
 - [`BeforeFilter`](#beforefilter)
 
 ### `DateTimeToStringConverter`
@@ -95,6 +96,21 @@ $converter->convert(1445448480); // -> DateTime
 
 $converter = new TimestampToDateTimeConverter(new DateTimeZone('Europe/Vienna'));
 $converter->convert(1445448480); // -> DateTime
+```
+
+### `AfterFilter`
+
+`Plum\PlumDate\AfterFilter` returns `true` for all dates that are after a given date.
+
+```php
+use Plum\PlumDate\BeforeFilter;
+
+$filter = new AfterFilter(new DateTime('2015-10-21 19:28'));
+$filter->filter(new DateTime('2015-10-26 21:00')); // -> true
+$filter->filter(new DateTime('1955-11-12 18:38')); // -> false
+
+// Same date as in constructor:
+$filter->filter(new DateTime('2015-10-21 19:28')); // -> false
 ```
 
 ### `BeforeFilter`
