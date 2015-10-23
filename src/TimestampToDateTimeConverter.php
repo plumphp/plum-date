@@ -22,6 +22,8 @@ class TimestampToDateTimeConverter implements ConverterInterface
 
     /**
      * @param DateTimeZone|null $timeZone
+     *
+     * @codeCoverageIgnore
      */
     public function __construct(DateTimeZone $timeZone = null)
     {
