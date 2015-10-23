@@ -44,6 +44,7 @@ in time.
 
 - [`AfterFilter`](#afterfilter)
 - [`BeforeFilter`](#beforefilter)
+- [`RangeFilter`](#rangefilter)
 
 ### `DateTimeToStringConverter`
 
@@ -103,7 +104,7 @@ $converter->convert(1445448480); // -> DateTime
 `Plum\PlumDate\AfterFilter` returns `true` for all dates that are after a given date.
 
 ```php
-use Plum\PlumDate\BeforeFilter;
+use Plum\PlumDate\AfterFilter;
 
 $filter = new AfterFilter(new DateTime('2015-10-21 19:28'));
 $filter->filter(new DateTime('2015-10-26 21:00')); // -> true
@@ -126,6 +127,22 @@ $filter->filter(new DateTime('2015-10-26 21:00')); // -> false
 
 // Same date as in constructor:
 $filter->filter(new DateTime('2015-10-21 19:28')); // -> false
+```
+
+### `RangeFilter`
+
+`Plum\PlumDate\RangeFilter` returns `true` for all dates that lie within a given range of dates.
+
+```php
+use Plum\PlumDate\AfterFilter;
+
+$filter = new AfterFilter(new DateTime('2000-01-01 00:00:00'), new Date('2009-12-31 23:59:59'));
+$filter->filter(new DateTime('2005-07-07 12:00:00')); // -> true
+$filter->filter(new DateTime('2015-10-21 19:28:00')); // -> false
+
+// Same date as in start or end date:
+$filter->filter(new DateTime('2000-01-01 00:00:00')); // -> true
+$filter->filter(new DateTime('2009-12-31 23:59:59')); // -> true
 ```
 
 
