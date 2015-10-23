@@ -149,7 +149,9 @@ $filter->filter(new DateTime('2009-12-31 23:59:59')); // -> true
 Change Log
 ----------
 
-*No version released yet.*
+### Version 0.1 (23 October 2015)
+
+- Initial release
 
 
 License
