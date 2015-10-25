@@ -8,6 +8,7 @@
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/918ylw0wh31k438c?svg=true)](https://ci.appveyor.com/project/florianeckerstorfer/plum-date)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/plumphp/plum-date/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/plumphp/plum-date/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/plumphp/plum-date/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/plumphp/plum-date/?branch=master)
+[![StyleCI](https://styleci.io/repos/44620261/shield)](https://styleci.io/repos/44620261)
 
 Developed by [Florian Eckerstorfer](https://florian.ec) in Vienna, Europe.
 
