@@ -5,6 +5,7 @@
 > PlumDate provides date and time converters for Plum. Plum is a data processing pipeline for PHP.
 
 [![Build Status](https://travis-ci.org/plumphp/plum-date.svg)](https://travis-ci.org/plumphp/plum-date)
+[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/918ylw0wh31k438c?svg=true)](https://ci.appveyor.com/project/florianeckerstorfer/plum-date)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/plumphp/plum-date/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/plumphp/plum-date/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/plumphp/plum-date/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/plumphp/plum-date/?branch=master)
 
