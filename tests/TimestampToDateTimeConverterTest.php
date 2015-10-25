@@ -6,9 +6,8 @@ use DateTimeZone;
 use PHPUnit_Framework_TestCase;
 
 /**
- * TimestampToDateTimeConverterTest
+ * TimestampToDateTimeConverterTest.
  *
- * @package   Plum\PlumDate
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  * @group     unit
@@ -22,7 +21,7 @@ class TimestampToDateTimeConverterTest extends PHPUnit_Framework_TestCase
     public function convertConvertsStringToDateTime()
     {
         $converter = new TimestampToDateTimeConverter();
-        $date = $converter->convert(1445448480);
+        $date      = $converter->convert(1445448480);
 
         $this->assertInstanceOf('\DateTime', $date);
         $this->assertEquals(1445448480, $date->getTimestamp());
@@ -35,7 +34,7 @@ class TimestampToDateTimeConverterTest extends PHPUnit_Framework_TestCase
     public function convertConvertsStringToDateTimeWithTimeZone()
     {
         $converter = new TimestampToDateTimeConverter(new DateTimeZone('Europe/Paris'));
-        $date = $converter->convert(1445448480);
+        $date      = $converter->convert(1445448480);
 
         $this->assertInstanceOf('\DateTime', $date);
         $this->assertEquals(1445448480, $date->getTimestamp());

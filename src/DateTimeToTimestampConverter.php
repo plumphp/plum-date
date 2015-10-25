@@ -7,9 +7,8 @@ use InvalidArgumentException;
 use Plum\Plum\Converter\ConverterInterface;
 
 /**
- * DateTimeToTimestampConverter
+ * DateTimeToTimestampConverter.
  *
- * @package   Plum\PlumDate
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  */

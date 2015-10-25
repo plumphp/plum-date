@@ -7,9 +7,8 @@ use DateTimeZone;
 use Plum\Plum\Converter\ConverterInterface;
 
 /**
- * StringToDateTimeConverter
+ * StringToDateTimeConverter.
  *
- * @package   Plum\PlumDate
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  */

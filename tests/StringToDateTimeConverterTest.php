@@ -6,9 +6,8 @@ use DateTimeZone;
 use PHPUnit_Framework_TestCase;
 
 /**
- * StringToDateTimeConverterTest
+ * StringToDateTimeConverterTest.
  *
- * @package   Plum\PlumDate
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  * @group     unit
@@ -22,7 +21,7 @@ class StringToDateTimeConverterTest extends PHPUnit_Framework_TestCase
     public function convertConvertsStringToDateTime()
     {
         $converter = new StringToDateTimeConverter();
-        $date = $converter->convert('2015-10-21 19:28');
+        $date      = $converter->convert('2015-10-21 19:28');
 
         $this->assertInstanceOf('\DateTime', $date);
         $this->assertEquals('2015-10-21 19:28', $date->format('Y-m-d H:i'));
@@ -35,7 +34,7 @@ class StringToDateTimeConverterTest extends PHPUnit_Framework_TestCase
     public function convertConvertsStringToDateTimeWithTimeZone()
     {
         $converter = new StringToDateTimeConverter(new DateTimeZone('Europe/Vienna'));
-        $date = $converter->convert('2015-10-21 19:28');
+        $date      = $converter->convert('2015-10-21 19:28');
 
         $this->assertInstanceOf('\DateTime', $date);
         $this->assertEquals('2015-10-21 19:28', $date->format('Y-m-d H:i'));
