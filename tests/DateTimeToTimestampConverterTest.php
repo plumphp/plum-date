@@ -3,13 +3,11 @@
 namespace Plum\PlumDate;
 
 use DateTime;
-use DateTimeZone;
 use PHPUnit_Framework_TestCase;
 
 /**
- * DateTimeToTimestampConverterTest
+ * DateTimeToTimestampConverterTest.
  *
- * @package   Plum\PlumDate
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  * @group     unit

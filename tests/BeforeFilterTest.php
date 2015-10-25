@@ -7,9 +7,8 @@ use DateTimeZone;
 use PHPUnit_Framework_TestCase;
 
 /**
- * BeforeFilterTest
+ * BeforeFilterTest.
  *
- * @package   Plum\PlumDate
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  * @group     unit

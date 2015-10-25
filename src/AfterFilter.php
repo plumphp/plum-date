@@ -6,9 +6,8 @@ use DateTime;
 use Plum\Plum\Filter\FilterInterface;
 
 /**
- * AfterFilter
+ * AfterFilter.
  *
- * @package   Plum\PlumDate
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  */

@@ -6,9 +6,8 @@ use DateTime;
 use PHPUnit_Framework_TestCase;
 
 /**
- * DateTimeToStringConverterTest
+ * DateTimeToStringConverterTest.
  *
- * @package   Plum\PlumDate
  * @author    Florian Eckerstorfer
  * @copyright 2015 Florian Eckerstorfer
  * @group     unit
